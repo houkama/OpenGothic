@@ -176,6 +176,7 @@ class Gothic final {
     bool                                    isMarvin = false;
     bool                                    isDebug  = false;
     bool                                    isRambo  = false;
+	bool									isFreecam = false;
     VersionInfo                             vinfo;
     std::mt19937                            randGen;
 

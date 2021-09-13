@@ -79,6 +79,9 @@ Gothic::Gothic(const int argc, const char **argv) {
     else if(arg=="-validation" || arg=="-v") {
       isDebug=true;
       }
+	else if (arg == "-freecam") {
+		isFreecam = true;
+	}
     }
 
   if(gpath.empty()) {
