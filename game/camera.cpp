@@ -343,6 +343,8 @@ const Daedalus::GEngineClasses::CCamSys &Camera::cameraDef() const {
   if(camMod==Death)
     return camd.deathCam();
   return camd.stdCam();
+  if (camMod == Free)
+	  return camd.freeCam();
   }
 
 void Camera::clampRange(float &zoom) {

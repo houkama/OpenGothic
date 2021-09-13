@@ -17,6 +17,7 @@ class CameraDefinitions final {
     const Daedalus::GEngineClasses::CCamSys& deathCam()     const { return camModDeath;  }
     const Daedalus::GEngineClasses::CCamSys& swimCam()      const { return camModSwim;   }
     const Daedalus::GEngineClasses::CCamSys& diveCam()      const { return camModDive;   }
+	const Daedalus::GEngineClasses::CCamSys& freeCam()      const { return camModFree; }
     const Daedalus::GEngineClasses::CCamSys& mobsiCam(std::string_view tag, std::string_view pos) const;
 
   private:
@@ -31,4 +32,5 @@ class CameraDefinitions final {
     Daedalus::GEngineClasses::CCamSys camModNormal, camModFp, camModBack;
     Daedalus::GEngineClasses::CCamSys camModDialog, camModInventory, camModDeath, camModSwim, camModDive;
     Daedalus::GEngineClasses::CCamSys camModMelee, camModRange, camModMage;
+	Daedalus::GEngineClasses::CCamSys camModFree;
   };

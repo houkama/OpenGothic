@@ -25,7 +25,8 @@ class Camera final {
       Mobsi,
       Death,
       Swim,
-      Dive
+      Dive,
+	  Free
       };
 
     void reset(World& world);
