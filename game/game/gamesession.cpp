@@ -55,6 +55,10 @@ void GameSession::HeroStorage::putToWorld(World& owner,const std::string& wayPoi
 GameSession::GameSession(std::string file) {
   cam.reset(new Camera());
 
+  if (Gothic::inst().isFreecamMode()) {
+	  cam->setMode(Camera::Free);
+  }
+
   Gothic::inst().setLoadingProgress(0);
   setTime(gtime(8,0));
 

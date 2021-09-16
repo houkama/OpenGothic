@@ -81,6 +81,7 @@ Gothic::Gothic(const int argc, const char **argv) {
       }
 	else if (arg == "-freecam") {
 		isFreecam = true;
+		std::cout << "Freecam true" << std::endl;
 	}
     }
 

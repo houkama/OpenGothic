@@ -48,6 +48,9 @@ class KeyCodec final {
 
       K_ENTER, // transform back
       K_F8,
+	  K_K, // port forward
+
+	  K_F4, // switch free_camera_mode
 
       Last
       };

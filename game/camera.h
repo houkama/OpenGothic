@@ -50,6 +50,7 @@ class Camera final {
 
     void setFirstPerson(bool fp);
     bool isFirstPerson() const;
+	bool isFreemode() { if (camMod == Free) return 1; else return 0; }
 
     void setLookBack(bool lb);
 

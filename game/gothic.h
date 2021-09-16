@@ -99,6 +99,7 @@ class Gothic final {
     bool         isDebugMode() const;
     bool         isRamboMode() const;
     bool         isWindowMode() const { return isWindow; }
+	bool		 isFreecamMode() const { return isFreecam; }
 
     LoadState    checkLoading() const;
     bool         finishLoading();

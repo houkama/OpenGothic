@@ -399,7 +399,7 @@ void Camera::followPos(Vec3& pos, Vec3 dest, bool inMove, float dtF) {
   auto        dp  = (dest-pos);
   auto        len = dp.manhattanLength();
 
-  if(len>0.1f && def.translate && camMod!=Dialog && camMod!=Mobsi){
+  if(len>0.1f && def.translate && camMod!=Dialog && camMod!=Mobsi && camMod!=Free){
     const float maxDist = 180;
     float       speed   = 0;
     if(inMove)
