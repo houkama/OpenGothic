@@ -321,6 +321,7 @@ void PlayerControl::marvinF8(uint64_t dt) {
   }
 
 void PlayerControl::marvinK(uint64_t dt) {
+<<<<<<< HEAD
 	auto w = Gothic::inst().world();
 	if (w == nullptr || w->player() == nullptr)
 		return;
@@ -341,6 +342,26 @@ void PlayerControl::marvinK(uint64_t dt) {
 	pl.quitIneraction();
 	//pl.setAnim(AnimationSolver::Idle);
 }
+=======
+  auto w = Gothic::inst().world();
+  if (w == nullptr || w->player() == nullptr)
+    return;
+
+  auto& pl = *w->player();
+  auto  pos = pl.position();
+  float rot = pl.rotationRad();
+  float s = std::sin(rot), c = std::cos(rot);
+
+  Tempest::Vec3 dp(s, 0.0f, -c);
+  pos += dp * 6000 * float(dt) / 1000.f;
+
+  pl.clearState(false);
+  pl.setPosition(pos);
+  pl.clearSpeed();
+  pl.quitIneraction();
+  // pl.setAnim(AnimationSolver::Idle); // Original G2 behaviour: K doesn't stop running
+  }
+>>>>>>> 46ebf28bd420f6397a8a2a2824b9455b528ab74f
 
 Focus PlayerControl::findFocus(Focus* prev) {
   auto w = Gothic::inst().world();
@@ -382,8 +403,13 @@ bool PlayerControl::tickMove(uint64_t dt) {
 
   if(ctrl[Action::K_F8] && Gothic::inst().isMarvinEnabled())
     marvinF8(dt);
+<<<<<<< HEAD
   if (ctrl[Action::K_K] && Gothic::inst().isMarvinEnabled())
 	marvinK(dt);
+=======
+  if(ctrl[Action::K_K] && Gothic::inst().isMarvinEnabled())
+    marvinK(dt);
+>>>>>>> 46ebf28bd420f6397a8a2a2824b9455b528ab74f
   cacheFocus = ctrl[Action::ActionGeneric];
   if(camera!=nullptr)
     camera->setLookBack(ctrl[Action::LookBack]);

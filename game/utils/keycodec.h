@@ -47,11 +47,9 @@ class KeyCodec final {
       WeaponMage10,
 
       K_ENTER, // transform back
-      K_F8,
-	  K_K, // port forward
-
-	  K_F4, // switch free_camera_mode
-
+      K_F8, // Marvin Mode's F8
+      K_K, // Marvin Mode's K
+      K_F4, // switch free_camera_mode
       Last
       };
 
